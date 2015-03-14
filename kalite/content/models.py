@@ -23,7 +23,7 @@ from django.utils.translation import ugettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey
 
 
-class TopicTree(MPTTModel):
+class TopicTree(models.Model):
     """Base model for all trees / channels"""
     name = models.CharField(
         max_length=255,

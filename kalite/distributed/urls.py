@@ -18,6 +18,7 @@ import kalite.playlist.urls
 import kalite.control_panel.urls
 import kalite.facility.urls
 import kalite.updates.urls
+import kalite.content.urls
 import securesync.urls
 
 import fle_utils.handlebars
@@ -34,6 +35,10 @@ urlpatterns = patterns('',
 urlpatterns += patterns('',
     url(r'^securesync/', include(kalite.facility.urls)),  # for backwards compat
     url(r'^securesync/', include(securesync.urls)),
+)
+
+urlpatterns += patterns('',
+    url(r'^content/', include(kalite.content.urls)),
 )
 
 urlpatterns += patterns('',
